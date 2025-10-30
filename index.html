@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>MotoKeyman Bootstrap Template - Index</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <title>MotoKeyman | Taller experto en mantenimiento y repuestos para motos</title>
+    <meta
+      name="description"
+      content="MotoKeyman ofrece mantenimiento preventivo y correctivo de motocicletas, repuestos originales y asesoría especializada en Cali."
+    />
+    <meta
+      name="keywords"
+      content="mantenimiento de motos, repuestos para motos, taller de motos Cali, MotoKeyman"
+    />
 
     <!-- Favicons -->
     <link href="assets/img/logo.jpg" rel="icon" />
@@ -14,69 +20,503 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-dymI7C8kXgkZ0d+X9H5G/7wG+jD/adJzi10BGSAdoo6gWQBaIj++ImQxGc1dQc5sKXc5teLoI0lp4rHU/+nYKw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- =======================================================
-  * Template Name: MotoKeyman - v4.10.0
-  * Template URL: https://bootstrapmade.com/MotoKeyman-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+      * Template Name: MotoKeyman - v4.10.0
+      * Template URL: https://bootstrapmade.com/MotoKeyman-free-bootstrap-html-template-corporate/
+      * Author: BootstrapMade.com
+      * License: https://bootstrapmade.com/license/
+      ======================================================== -->
+
+    <!-- Custom Styles for the new layout -->
+    <style>
+      :root {
+        --brand-red: #d62828;
+        --brand-yellow: #ffb703;
+        --brand-dark: #1a1a1a;
+        --brand-gray: #f5f5f5;
+      }
+
+      body {
+        font-family: "Poppins", "Montserrat", sans-serif;
+        color: var(--brand-dark);
+        background-color: #ffffff;
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: var(--brand-dark);
+      }
+
+      p {
+        color: #4f4f4f;
+      }
+
+      .btn-brand-primary {
+        background: linear-gradient(135deg, var(--brand-red), #8d0808);
+        color: #fff;
+        border: none;
+        padding: 12px 28px;
+        font-weight: 600;
+        border-radius: 999px;
+        box-shadow: 0 15px 30px rgba(214, 40, 40, 0.35);
+        transition: all 0.4s ease;
+      }
+
+      .btn-brand-primary:hover {
+        color: #fff;
+        box-shadow: 0 20px 35px rgba(214, 40, 40, 0.45);
+        transform: translateY(-4px);
+      }
+
+      .btn-outline-brand {
+        border-radius: 999px;
+        padding: 12px 30px;
+        border: 2px solid var(--brand-yellow);
+        color: var(--brand-yellow);
+        font-weight: 600;
+        transition: all 0.35s ease;
+      }
+
+      .btn-outline-brand:hover {
+        background: var(--brand-yellow);
+        color: var(--brand-dark);
+        transform: translateY(-4px);
+      }
+
+      header#header {
+        background: rgba(10, 10, 10, 0.85);
+        transition: all 0.3s ease;
+        padding: 18px 0;
+      }
+
+      header#header.header-scrolled {
+        background: rgba(10, 10, 10, 0.95);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      #header .logo a {
+        color: #fff;
+        font-size: 30px;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+
+      #hero {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+            rgba(10, 10, 10, 0.75),
+            rgba(10, 10, 10, 0.75)
+          ),
+          url("assets/img/ultima.png") center/cover fixed;
+        overflow: hidden;
+      }
+
+      #hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top right, rgba(255, 183, 3, 0.25), transparent);
+        pointer-events: none;
+      }
+
+      #hero .hero-content {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+      }
+
+      #hero h1 {
+        font-size: 3.2rem;
+        line-height: 1.2;
+      }
+
+      #hero h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 24px;
+      }
+
+      #hero .hero-badges span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        background: rgba(214, 40, 40, 0.25);
+        border-radius: 999px;
+        padding: 6px 18px;
+        margin-right: 12px;
+        font-size: 0.85rem;
+      }
+
+      .section-title h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        position: relative;
+      }
+
+      .section-title h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: var(--brand-yellow);
+        margin-top: 12px;
+        border-radius: 2px;
+      }
+
+      .section-transition {
+        position: relative;
+        isolation: isolate;
+      }
+
+      .section-transition::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), transparent 55%, rgba(0, 0, 0, 0.04));
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        z-index: -1;
+      }
+
+      .section-transition.aos-animate::before {
+        opacity: 1;
+      }
+
+      .about-parallax {
+        background: linear-gradient(rgba(26, 26, 26, 0.82), rgba(26, 26, 26, 0.82)),
+          url("assets/img/equipo.png") center/cover fixed;
+        color: #fff;
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .about-parallax h3,
+      .about-parallax p,
+      .about-parallax li {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .about-highlight {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(214, 40, 40, 0.18);
+        border-radius: 16px;
+        padding: 12px 18px;
+        margin-bottom: 18px;
+      }
+
+      .about-highlight i {
+        font-size: 1.5rem;
+        color: var(--brand-yellow);
+      }
+
+      .service-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 32px 24px;
+        text-align: left;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        top: -60px;
+        right: -60px;
+        background: rgba(214, 40, 40, 0.12);
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+      }
+
+      .service-card:hover::before {
+        transform: scale(1.3);
+      }
+
+      .service-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        background: rgba(214, 40, 40, 0.16);
+        color: var(--brand-red);
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        transform: rotate(-8deg) scale(1.08);
+      }
+
+      .experience-item {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        padding: 26px;
+        height: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+      }
+
+      .experience-item h4 {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+      }
+
+      .experience-item .badge {
+        background: rgba(214, 40, 40, 0.18);
+        color: var(--brand-red);
+        font-weight: 600;
+        border-radius: 999px;
+        padding: 6px 14px;
+      }
+
+      .testimonials {
+        background: var(--brand-gray);
+      }
+
+      .testimonial-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 34px;
+        position: relative;
+        box-shadow: 0 22px 45px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.4s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .testimonial-card::before {
+        content: "\f10d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        font-size: 3rem;
+        color: rgba(214, 40, 40, 0.12);
+        top: 24px;
+        right: 24px;
+      }
+
+      .testimonial-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .testimonial-meta img {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid rgba(214, 40, 40, 0.35);
+      }
+
+      .cta-highlight {
+        background: linear-gradient(140deg, var(--brand-red), #ff4d4d);
+        border-radius: 28px;
+        padding: 48px;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .cta-highlight::after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 50%;
+        bottom: -70px;
+        right: -70px;
+      }
+
+      .cta-highlight h3 {
+        color: #fff;
+        font-size: 2rem;
+      }
+
+      .cta-highlight p {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .cta-highlight .btn-outline-brand {
+        border-color: #fff;
+        color: #fff;
+      }
+
+      .cta-highlight .btn-outline-brand:hover {
+        background: #fff;
+        color: var(--brand-dark);
+      }
+
+      .footer-top {
+        background: #111;
+        color: #eee;
+        padding: 60px 0 30px 0;
+      }
+
+      .footer-top h3,
+      .footer-top h4 {
+        color: #fff;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        padding: 6px 0;
+      }
+
+      .footer-links ul a {
+        color: rgba(255, 255, 255, 0.75);
+        transition: all 0.3s ease;
+      }
+
+      .footer-links ul a:hover {
+        color: var(--brand-yellow);
+        padding-left: 8px;
+      }
+
+      .footer-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-right: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: var(--brand-yellow);
+        color: var(--brand-dark);
+        transform: translateY(-4px);
+      }
+
+      .footer-bottom {
+        background: #0c0c0c;
+        color: rgba(255, 255, 255, 0.6);
+        text-align: center;
+        padding: 18px 0;
+      }
+
+      .whatsapp {
+        background: #25d366;
+        color: #fff;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        box-shadow: 0 20px 30px rgba(37, 211, 102, 0.45);
+        z-index: 999;
+        transition: transform 0.3s ease;
+      }
+
+      .whatsapp:hover {
+        transform: translateY(-6px) scale(1.05);
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        #hero {
+          text-align: center;
+          padding: 140px 0 100px;
+        }
+
+        #hero h1 {
+          font-size: 2.6rem;
+        }
+
+        .about-parallax {
+          background-attachment: scroll;
+        }
+
+        .cta-highlight {
+          text-align: center;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-      <div class="container d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
         <h1 class="logo me-auto"><a href="index.html">MotoKeyman</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
         <nav id="navbar" class="navbar">
           <ul>
-            <li>
-              <a class="nav-link scrollto active" href="#hero">Principal</a>
-            </li>
-            <li>
-              <a class="nav-link scrollto" href="#about">Acerca de Nosotros</a>
-            </li>
+            <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+            <li><a class="nav-link scrollto" href="#about">Acerca</a></li>
             <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-            <li>
-              <a class="nav-link scrollto" href="#portfolio">Galeria</a>
-            </li>
-
+            <li><a class="nav-link scrollto" href="#testimonios">Testimonios</a></li>
+            <li><a class="nav-link scrollto" href="#portfolio">Galería</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
-            <li>
-              <a class="getstarted scrollto" href="#about">Empezar</a>
-            </li>
+            <li><a class="getstarted scrollto" href="#cta-agenda">Agenda hoy</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -87,30 +527,36 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
-            data-aos="fade-up"
-            data-aos-delay="200"
+      <div class="container hero-content" data-aos="fade-up" data-aos-delay="200">
+        <div class="hero-badges mb-4">
+          <span><i class="bi bi-lightning-charge"></i> Service Express</span>
+          <span><i class="bi bi-award"></i> Técnicos certificados</span>
+        </div>
+        <h1>Tu moto como nueva, lista para conquistar la ciudad</h1>
+        <h2>
+          Mantenimiento integral, repuestos originales y diagnósticos de alta precisión
+          para que disfrutes cada kilómetro con total confianza.
+        </h2>
+        <div class="d-flex flex-column flex-sm-row gap-3">
+          <a href="#cta-agenda" class="btn-brand-primary">Agenda mantenimiento</a>
+          <a href="https://wa.link/nd73rk" target="_blank" class="btn-outline-brand"
+            ><i class="bi bi-chat-dots me-2"></i>Habla con un experto</a
           >
-            <h1>Expertos en Mantenimiento</h1>
-            <h2>General y Preventivo. Se entrega la moto como Nueva</h2>
-            <div class="d-flex justify-content-center justify-content-lg-start">
-              <a href="#about" class="btn-get-started scrollto">Empezar</a>
-              <a
-                href="https://www.youtube.com/watch?v=2hRs1ArgqN8"
-                class="glightbox btn-watch-video"
-                ><i class="bi bi-play-circle"></i><span>Ver Video</span></a
-              >
+        </div>
+        <div class="d-flex flex-wrap align-items-center gap-4 mt-5" data-aos="fade-up" data-aos-delay="400">
+          <div class="d-flex align-items-center text-white gap-2">
+            <i class="bi bi-shield-check fs-3 text-warning"></i>
+            <div>
+              <strong>Garantía total</strong>
+              <p class="mb-0 small text-white-50">Piezas originales con respaldo</p>
             </div>
           </div>
-          <div
-            class="col-lg-6 order-1 order-lg-2 hero-img"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <img src="assets/img/logo.jpg" class="img-fluid animated" alt="" />
+          <div class="d-flex align-items-center text-white gap-2">
+            <i class="bi bi-geo-alt fs-3 text-warning"></i>
+            <div>
+              <strong>En Cali y alrededores</strong>
+              <p class="mb-0 small text-white-50">Servicio de recogida sin costo</p>
+            </div>
           </div>
         </div>
       </div>
@@ -118,265 +564,132 @@
     <!-- End Hero -->
 
     <main id="main">
-      <!-- End Cliens Section -->
-
+      <!-- Floating WhatsApp -->
       <a href="https://wa.link/nd73rk" class="whatsapp" target="_blank">
-        <i class="fa fa-whatsapp whatsapp-icon"></i
-      ></a>
-      <!-- ======= About Us Section ======= -->
-      <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Acerda de nosotros</h2>
-          </div>
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+      </a>
 
-          <div class="row content">
+      <!-- ======= About Us Section with Parallax ======= -->
+      <section id="about" class="about py-5 section-transition" data-aos="fade-up">
+        <div class="container">
+          <div class="row g-4 align-items-center about-parallax p-5">
             <div class="col-lg-6">
+              <div class="about-highlight">
+                <i class="bi bi-gear"></i>
+                <span>Más de 15 años cuidando motocicletas de alto rendimiento</span>
+              </div>
+              <h2 class="mb-4 text-white">Acerca de MotoKeyman</h2>
               <p>
-                Contamos con una tienda física que ofrece los mejores servicios
-                para nuestros clientes como lo son:
+                Somos el aliado estratégico de los moteros exigentes. Combinamos tecnología de
+                diagnóstico avanzada, un equipo certificado y procesos transparentes para que tu
+                moto siempre entregue su máximo desempeño.
               </p>
-              <ul>
-                <li>
-                  <i class="ri-check-double-line"></i> Mantenimiento full
-                  general
-                </li>
-                <li>
-                  <i class="ri-check-double-line"></i>
-                  Mantenimiento preventivo
-                </li>
-                <li><i class="ri-check-double-line"></i> Repuestos de motos</li>
+              <ul class="mt-4 list-unstyled">
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i>Plan de mantenimiento preventivo personalizado</li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i>Stock permanente de repuestos originales garantizados</li>
+                <li class="mb-3"><i class="bi bi-check-circle-fill text-warning me-2"></i>Entrega certificada y asesoría pos-servicio</li>
               </ul>
             </div>
-            <div class="col-lg-6 pt-4 pt-lg-0">
-              <p>
-                Siglo’s motokeyman es una empresa distribuidora de repuestos de
-                motos de alta calidad que garantiza cada producto para cubrir
-                las necesidades de nuestros clientes Actualmente, cuenta con una
-                sucursal y diversos distribuidores de sus productos
-              </p>
-              <a href="#why-us" class="btn-learn-more">Leer más</a>
+            <div class="col-lg-6">
+              <div class="bg-white text-dark rounded-4 p-4 p-lg-5 shadow-lg">
+                <h3 class="fw-bold">¿Por qué los riders nos eligen?</h3>
+                <p class="mb-4">
+                  Nuestros clientes destacan la precisión en el diagnóstico, la comunicación
+                  constante y la honestidad para indicar solo lo necesario. No improvisamos, seguimos
+                  protocolos avalados por las principales marcas del país.
+                </p>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="experience-item h-100">
+                      <span class="badge mb-2">+5000 motos atendidas</span>
+                      <h4>Confianza comprobada</h4>
+                      <p class="mb-0">Casos documentados y seguimiento digital para tu tranquilidad.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="experience-item h-100">
+                      <span class="badge mb-2">Diagnóstico premium</span>
+                      <h4>Equipos de última generación</h4>
+                      <p class="mb-0">Analizamos motor, parte eléctrica y frenos con software dedicado.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <a href="#services" class="btn-brand-primary me-3">Conoce nuestros servicios</a>
+                  <a href="#cta-agenda" class="btn-outline-brand">Recibe una asesoría</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- End About Us Section -->
 
-      <!-- ======= Why Us Section ======= -->
-      <section id="why-us" class="why-us section-bg">
-        <div class="container-fluid" data-aos="fade-up">
-          <div class="row">
-            <div
-              class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1"
-            >
-              <div class="content">
-                <h3>
-                  Somos más que un taller y almacen de respuestos para
-                  motos<strong> ¿Buscas algo confiable?</strong>
-                </h3>
-                <p>
-                  Lo primero que te enfrentas cuando encuentras algo extraño en
-                  tu moto, o hace un ruido fuera de lo normal es encontrar un
-                  taller mecánico de confianza, ¿cierto?
-                </p>
-              </div>
-
-              <div class="accordion-list">
-                <ul>
-                  <li>
-                    <a
-                      data-bs-toggle="collapse"
-                      class="collapse"
-                      data-bs-target="#accordion-list-1"
-                      ><span>01</span>¿Confiabiliad?
-                      <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    ></a>
-                    <div
-                      id="accordion-list-1"
-                      class="collapse show"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Lamentablemente es un gremio al cual las personas no se
-                        sienten tan seguras de sus servicios por la mala fama
-                        que han adquirido con el tiempo, se conoce de muchos
-                        casos donde el mecánico por ganar mas dinero se inventa
-                        daños o cambios de repuestos que realmente no se
-                        necesitan. ¡Pero esto cambió con nuestra llegada!
-                      </p>
-                    </div>
-                  </li>
-
-                  <li>
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordion-list-2"
-                      class="collapsed"
-                      ><span>02</span>
-                      ¿Trayectoria?
-                      <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    ></a>
-                    <div
-                      id="accordion-list-2"
-                      class="collapse"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        ¿Cómo ves el taller? es ordenado, ¿tienen procesos de
-                        llegada, entrega y soporte? ¿ Hay factura o garantía
-                        escrita por el trabajo realizado? ¿De donde sacan los
-                        repuestos? Aquí cuidamos a tu "bebé".
-                      </p>
-                    </div>
-                  </li>
-
-                  <li>
-                    <a
-                      data-bs-toggle="collapse"
-                      data-bs-target="#accordion-list-3"
-                      class="collapsed"
-                      ><span>03</span> Experiencia
-                      <i class="bx bx-chevron-down icon-show"></i
-                      ><i class="bx bx-chevron-up icon-close"></i
-                    ></a>
-                    <div
-                      id="accordion-list-3"
-                      class="collapse"
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p>
-                        Dicen que la experiencia es el nombre que le damos a
-                        nuestras equivocaciones, en este caso prefiero que mi
-                        moto la revise alguien que ya tiene mucha.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-              style="background-image: url('assets/img/why-us.png')"
-              data-aos="zoom-in"
-              data-aos-delay="150"
-            >
-              &nbsp;
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Why Us Section -->
-
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div
-              class="col-lg-6 d-flex align-items-center"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
-              <img
-                src="assets/img/mujer.png"
-                class="img-fluid"
-                height="500px"
-                alt=""
-              />
-            </div>
-            <div
-              class="col-lg-6 d-flex align-items-center"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
-              <img
-                src="assets/img/dos.png"
-                height="500px"
-                id="imagendos"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Skills Section -->
-
       <!-- ======= Services Section ======= -->
-      <section id="services" class="services section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Servicios</h2>
-            <p>
-              ¿Qué ofrecen en el taller de motos? Con nosotros cubrirás muchas
-              necesidades de tu motocicleta, en MotoKeyman te ofrecemos:
+      <section id="services" class="services py-5 section-transition section-bg" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title text-center mb-5">
+            <h2>Nuestros Servicios Especializados</h2>
+            <p class="mt-3">
+              En MotoKeyman abordamos cada motocicleta con un plan a la medida. Conoce nuestras
+              soluciones más solicitadas y potencia cada componente de tu máquina.
             </p>
           </div>
-
-          <div class="row">
-            <div
-              class="col-xl-3 col-md-6 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4><a href="">Mecánica general</a></h4>
+          <div class="row g-4">
+            <!-- Service Card 1 -->
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+              <div class="service-card h-100">
+                <div class="service-icon"><i class="bi bi-tools"></i></div>
+                <h4>Mecánica general</h4>
                 <p>
-                  Es importante realizar una revisión cuando se detecta el mal
-                  funcionamiento o ruido anormal.
+                  Ajustes de motor, sincronización y calibración precisa para recuperar la potencia
+                  original de tu moto.
                 </p>
+                <a href="#cta-agenda" class="stretched-link text-decoration-none fw-semibold text-danger"
+                  >Reserva tu diagnóstico</a
+                >
               </div>
             </div>
-
-            <div
-              class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-file"></i></div>
-                <h4><a href="">Parte eléctrica</a></h4>
+            <!-- Service Card 2 -->
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+              <div class="service-card h-100">
+                <div class="service-icon"><i class="bi bi-lightbulb"></i></div>
+                <h4>Sistema eléctrico</h4>
                 <p>
-                  Un vehículo está conformado de diversos sistemas y
-                  componentes, dentro de ellos se encuentra el sistema
-                  eléctrico.
+                  Revisión electrónica, cambio de cableado, baterías y sistemas de iluminación con
+                  pruebas certificadas.
                 </p>
+                <a href="#cta-agenda" class="stretched-link text-decoration-none fw-semibold text-danger"
+                  >Optimiza tu energía</a
+                >
               </div>
             </div>
-
-            <div
-              class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-tachometer"></i></div>
-                <h4><a href="">Duplicado de llaves</a></h4>
+            <!-- Service Card 3 -->
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="service-card h-100">
+                <div class="service-icon"><i class="bi bi-key"></i></div>
+                <h4>Duplicado de llaves</h4>
                 <p>
-                  Sea cual sea el tipo de llave de tu moto: con chip o sin chip,
-                  sencilla o tipo culebrilla, tener una copia a tu alcance es
-                  indispensable.
+                  Copias con chip y codificación avanzada. Servicio rápido, seguro y garantizado en el
+                  acto.
                 </p>
+                <a href="#cta-agenda" class="stretched-link text-decoration-none fw-semibold text-danger"
+                  >Protege tu inversión</a
+                >
               </div>
             </div>
-
-            <div
-              class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-layer"></i></div>
-                <h4>
-                  <a href="">Servicio de soldadura eléctrica y autógena</a>
-                </h4>
+            <!-- Service Card 4 -->
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+              <div class="service-card h-100">
+                <div class="service-icon"><i class="bi bi-fire"></i></div>
+                <h4>Soldadura especializada</h4>
                 <p>
-                  Las mayores ventajas de este tipo de soldadura son el precio,
-                  y, sobre todo, la facilidad para transportar el equipo.
+                  Reparaciones estructurales con soldadura eléctrica y autógena, garantizando
+                  resistencia y acabado profesional.
                 </p>
+                <a href="#cta-agenda" class="stretched-link text-decoration-none fw-semibold text-danger"
+                  >Solicita una valoración</a
+                >
               </div>
             </div>
           </div>
@@ -384,38 +697,198 @@
       </section>
       <!-- End Services Section -->
 
-      <!-- ======= Cta Section ======= -->
-      <section id="cta" class="cta">
-        <div class="container" data-aos="zoom-in">
-          <div class="row">
-            <div class="col-lg-9 text-center text-lg-start">
-              <h3>¿Puedo comprar repuestos para moto online?</h3>
-              <p>
-                Si, nuestro sitio web recibe pagos online, puedes encontrar
-                nuestro catalogo de accesorios y repuestos visitando desde la
-                pagina inicio, puedes pedir repuestos aun si estas fuera de
-                Cali, te lo enviamos a domicilio. O puedes pedir online e
-                instalar en tienda.
-              </p>
+      <!-- ======= Why Choose Us Section ======= -->
+      <section id="why-us" class="why-us py-5 section-transition" data-aos="fade-up">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/why-us.png" alt="Equipo MotoKeyman" class="img-fluid rounded-4 shadow-lg" />
             </div>
-            <div class="col-lg-3 cta-btn-container text-center">
-              <a class="cta-btn align-middle" href="#">Ir</a>
+            <div class="col-lg-7">
+              <div class="section-title">
+                <h2>Tu tranquilidad es nuestra prioridad</h2>
+              </div>
+              <p class="mt-3">
+                Sabemos lo importante que es tu moto. Por eso desarrollamos un proceso transparente,
+                rápido y respaldado por marcas líderes en el mercado.
+              </p>
+              <div class="accordion accordion-flush mt-4" id="accordionMoto">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      Confianza y transparencia en cada servicio
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionMoto"
+                  >
+                    <div class="accordion-body">
+                      Te entregamos diagnóstico digital, presupuesto detallado y fotografías del
+                      proceso. Nada se reemplaza sin tu aprobación.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                    >
+                      Trayectoria comprobada
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionMoto"
+                  >
+                    <div class="accordion-body">
+                      Hemos construido una comunidad fiel de moteros gracias a nuestras certificaciones
+                      de marcas como Bajaj, Honda, Auteco y Yamaha.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      Experiencia respaldada por tecnología
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionMoto"
+                  >
+                    <div class="accordion-body">
+                      Utilizamos herramientas de diagnóstico asistidas por software para obtener
+                      resultados precisos en menos tiempo.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Cta Section -->
+      <!-- End Why Choose Us Section -->
 
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Galeria</h2>
-            <p>
-             
+      <!-- ======= Testimonial Section ======= -->
+      <section id="testimonios" class="testimonials py-5 section-transition" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>Testimonios reales</h2>
+            <p class="mt-3">
+              Moteros de toda la región confían en MotoKeyman. Esto es lo que dicen después de vivir la
+              experiencia en nuestro taller.
             </p>
           </div>
+          <div class="row g-4 mt-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="testimonial-card h-100">
+                <p>
+                  "Mi moto necesitaba una revisión completa antes de un viaje largo. Me entregaron un
+                  informe detallado, repuestos originales y quedó lista antes del tiempo estimado."
+                </p>
+                <div class="testimonial-meta">
+                  <img src="assets/img/team/team-1.jpg" alt="Cliente satisfecho" />
+                  <div>
+                    <h5 class="mb-0">Laura Rodríguez</h5>
+                    <small>Honda CB 190R</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="testimonial-card h-100">
+                <p>
+                  "Lo que más me gusta es la transparencia. Te muestran el diagnóstico en vivo y te
+                  explican cada cambio. Nada de sorpresas cuando recibes la cuenta."
+                </p>
+                <div class="testimonial-meta">
+                  <img src="assets/img/team/team-2.jpg" alt="Cliente satisfecho" />
+                  <div>
+                    <h5 class="mb-0">Santiago Gómez</h5>
+                    <small>Yamaha FZ 2.0</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="testimonial-card h-100">
+                <p>
+                  "Necesitaba repuestos difíciles de conseguir. Los consiguieron rápido y con garantía.
+                  Además, el servicio de recogida me ahorró mucho tiempo."
+                </p>
+                <div class="testimonial-meta">
+                  <img src="assets/img/team/team-3.jpg" alt="Cliente satisfecho" />
+                  <div>
+                    <h5 class="mb-0">Carlos Patiño</h5>
+                    <small>AKT CR4 162</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonial Section -->
 
+      <!-- ======= Call to Action ======= -->
+      <section id="cta-agenda" class="py-5" data-aos="fade-up">
+        <div class="container">
+          <div class="cta-highlight">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-8">
+                <h3>Agenda tu mantenimiento o cotiza repuestos ahora</h3>
+                <p class="mb-0">
+                  Nuestros asesores responderán en minutos. Personaliza tu plan de mantenimiento o
+                  recibe una cotización con repuestos originales garantizados.
+                </p>
+              </div>
+              <div class="col-lg-4 text-lg-end">
+                <a href="tel:+573167790452" class="btn-outline-brand mb-3 mb-lg-0">
+                  <i class="bi bi-telephone-outbound me-2"></i>Llámanos ahora
+                </a>
+                <a href="https://wa.link/nd73rk" target="_blank" class="btn-brand-primary ms-lg-3">
+                  <i class="bi bi-calendar2-check me-2"></i>Agendar por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End CTA Section -->
+
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio py-5 section-transition" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>Galería</h2>
+            <p class="mt-3">Proyectos recientes, instalaciones y algunos de nuestros repuestos estrella.</p>
+          </div>
           <ul
             id="portfolio-flters"
             class="d-flex justify-content-center"
@@ -424,80 +897,26 @@
           >
             <li data-filter="*" class="filter-active">Todos</li>
             <li data-filter=".filter-app">Repuestos</li>
-            <li data-filter=".filter-card">Icónicos</li>
-            <li data-filter=".filter-web">.</li>
+            <li data-filter=".filter-card">Taller</li>
+            <li data-filter=".filter-web">Equipo</li>
           </ul>
 
-          <div
-            class="row portfolio-container"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-img">
-                <img src="assets/img/repuestos.png" class="img-fluid" alt="" />
+                <img src="assets/img/repuestos.png" class="img-fluid" alt="Repuestos originales" />
               </div>
               <div class="portfolio-info">
-                <h4>Repuesto</h4>
-                <p>Orginal</p>
+                <h4>Repuestos</h4>
+                <p>Garantía de fábrica</p>
                 <a
                   href="assets/img/repuestos.png"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox preview-link"
-                  title="Repuesto"
+                  title="Repuestos originales"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-img">
-                <img src="assets/img/re2.png" class="img-fluid" alt="" />
-              </div>
-              <div class="portfolio-info">
-                <h4>Repuesto</h4>
-                <p>Orginal</p>
-
-                <a
-                  href="assets/img/re2.png"
-                  data-gallery="portfolioGallery"
-                  class="portfolio-lightbox preview-link"
-                  title="Repuesto"
-                  ><i class="bx bx-plus"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-img">
-                <img src="assets/img/re4.png" class="img-fluid" alt="" />
-              </div>
-              <div class="portfolio-info">
-                <h4>Repuesto</h4>
-                <p>Orginal</p>
-                <a
-                  href="assets/img/re4.png"
-                  data-gallery="portfolioGallery"
-                  class="portfolio-lightbox preview-link"
-                  title="Repuesto"
-                  ><i class="bx bx-plus"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
+                <a href="portfolio-details.html" class="details-link" title="Más detalles"
                   ><i class="bx bx-link"></i
                 ></a>
               </div>
@@ -505,114 +924,19 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
               <div class="portfolio-img">
-                <img src="assets/img/re5}.png" class="img-fluid" alt="" />
+                <img src="assets/img/ultima.png" class="img-fluid" alt="Servicio integral" />
               </div>
               <div class="portfolio-info">
-                <h4>Repuesto</h4>
-                <p>Orginal</p>
-                <a
-                  href="assets/img/re5}.png"
-                  data-gallery="portfolioGallery"
-                  class="portfolio-lightbox preview-link"
-                  title="Card 2"
-                  ><i class="bx bx-plus"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="repuesto"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-img">
-                <img src="assets/img/equipo.png" class="img-fluid" alt="" />
-              </div>
-              <div class="portfolio-info">
-                <h4>Equipo</h4>
-                <p>"Los encargados"</p>
-                <a
-                  href="assets/img/equipo.png"
-                  data-gallery="portfolioGallery"
-                  class="portfolio-lightbox preview-link"
-                  title="Equipo"
-                  ><i class="bx bx-plus"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-img">
-                <img src="assets/img/llantas.jpg" class="img-fluid" alt="" />
-              </div>
-              <div class="portfolio-info">
-                <h4>Llantas</h4>
-                <p>Originales</p>
-                <a
-                  href="assets/img/llantas.jpg"
-                  data-gallery="portfolioGallery"
-                  class="portfolio-lightbox preview-link"
-                  title="Llantas"
-                  ><i class="bx bx-plus"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-img">
-                <img src="assets/img/ultima.png" class="img-fluid" alt="" />
-              </div>
-              <div class="portfolio-info">
-                <h4>Un servicio</h4>
-                <p>Integral</p>
+                <h4>Servicio integral</h4>
+                <p>Mantenimiento completo</p>
                 <a
                   href="assets/img/ultima.png"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox preview-link"
-                  title="Servicio"
+                  title="Servicio integral"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
-                  ><i class="bx bx-link"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-img">
-                <img src="assets/img/tarritos.png" class="img-fluid" alt="" />
-              </div>
-              <div class="portfolio-info">
-                <h4>Pintura</h4>
-                <p>Original</p>
-                <a
-                  href="assets/img/tarritos.png"
-                  data-gallery="portfolioGallery"
-                  class="portfolio-lightbox preview-link"
-                  title="Pintura"
-                  ><i class="bx bx-plus"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
+                <a href="portfolio-details.html" class="details-link" title="Más detalles"
                   ><i class="bx bx-link"></i
                 ></a>
               </div>
@@ -620,22 +944,79 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
               <div class="portfolio-img">
-                <img src="assets/img/productos.png" class="img-fluid" alt="" />
+                <img src="assets/img/equipo.png" class="img-fluid" alt="Equipo especializado" />
               </div>
               <div class="portfolio-info">
-                <h4>Aceite</h4>
-                <p>Original</p>
+                <h4>Equipo especializado</h4>
+                <p>Técnicos certificados</p>
+                <a
+                  href="assets/img/equipo.png"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Equipo especializado"
+                  ><i class="bx bx-plus"></i
+                ></a>
+                <a href="portfolio-details.html" class="details-link" title="Más detalles"
+                  ><i class="bx bx-link"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img">
+                <img src="assets/img/llantas.jpg" class="img-fluid" alt="Llantas originales" />
+              </div>
+              <div class="portfolio-info">
+                <h4>Llantas</h4>
+                <p>Tracción segura</p>
+                <a
+                  href="assets/img/llantas.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Llantas originales"
+                  ><i class="bx bx-plus"></i
+                ></a>
+                <a href="portfolio-details.html" class="details-link" title="Más detalles"
+                  ><i class="bx bx-link"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img">
+                <img src="assets/img/tarritos.png" class="img-fluid" alt="Pintura original" />
+              </div>
+              <div class="portfolio-info">
+                <h4>Pintura</h4>
+                <p>Acabado premium</p>
+                <a
+                  href="assets/img/tarritos.png"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Pintura original"
+                  ><i class="bx bx-plus"></i
+                ></a>
+                <a href="portfolio-details.html" class="details-link" title="Más detalles"
+                  ><i class="bx bx-link"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-img">
+                <img src="assets/img/productos.png" class="img-fluid" alt="Productos MotoKeyman" />
+              </div>
+              <div class="portfolio-info">
+                <h4>Aceites y aditivos</h4>
+                <p>Marcas aliadas</p>
                 <a
                   href="assets/img/productos.png"
                   data-gallery="portfolioGallery"
                   class="portfolio-lightbox preview-link"
-                  title="Aceite"
+                  title="Aceites y aditivos"
                   ><i class="bx bx-plus"></i
                 ></a>
-                <a
-                  href="portfolio-details.html"
-                  class="details-link"
-                  title="More Details"
+                <a href="portfolio-details.html" class="details-link" title="Más detalles"
                   ><i class="bx bx-link"></i
                 ></a>
               </div>
@@ -645,18 +1026,14 @@
       </section>
       <!-- End Portfolio Section -->
 
-      <!-- End Team Section -->
-
-      <!-- ======= Frequently Asked Questions Section ======= -->
-      <section id="faq" class="faq section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
+      <!-- ======= FAQ Section ======= -->
+      <section id="faq" class="faq section-bg py-5 section-transition" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title text-center">
             <h2>Preguntas frecuentes</h2>
-            <p>
-              ¿Te imaginas que hagan algo en tu motocicleta y en vez de
-              mejorarla se empeore? Este es el miedo que vivimos todos los que
-              andamos en motocicleta, que una simple corrección se convierta en
-              una pesadilla. Es aquí cuando entramos a jugar nosotros.
+            <p class="mt-3">
+              Respondemos las dudas más comunes para que tomes decisiones rápidas y seguras sobre tu
+              motocicleta.
             </p>
           </div>
 
@@ -664,99 +1041,58 @@
             <ul>
               <li data-aos="fade-up" data-aos-delay="100">
                 <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  class="collapse"
-                  data-bs-target="#faq-list-1"
-                  >¿Cuál es el mejor taller de motos en Cali?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-bs-parent=".faq-list"
-                >
+                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">
+                  ¿Cuál es el mejor taller de motos en Cali?
+                  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                </a>
+                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                   <p>
-                    Decir qué somos «nosotros» seria un poco engreído, de lo que
-                    si estamos seguros y tranquilos es que el crecimiento que
-                    hemos tenido estos últimos años es gracias a la buena
-                    reputación que tenemos con los clientes, al excelente
-                    surtido del almacén de repuestos y al respaldo que hemos
-                    recibido de marcas como Bajaj, Honda, Auteco, Motul, AKT,
-                    Hero, Yamaha.
+                    Nuestro crecimiento sostenido se debe a la confianza de la comunidad. La mezcla de
+                    repuestos certificados, procesos digitalizados y servicio posventa nos convierten en
+                    la opción preferida de los riders caleños.
                   </p>
                 </div>
               </li>
 
               <li data-aos="fade-up" data-aos-delay="200">
                 <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-2"
-                  class="collapsed"
-                  >¿Puedo comprar repuestos para moto online?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-2"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
+                <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">
+                  ¿Puedo comprar repuestos para moto online?
+                  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                </a>
+                <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Si, nuestro sitio web recibe pagos online, puedes encontrar
-                    nuestro catalogo de accesorios y repuestos visitando desde
-                    la pagina inicio, puedes pedir repuestos aun si estas fuera
-                    de Cali, te lo enviamos a domicilio. O puedes pedir online e
-                    instalar en tienda.
+                    Sí. Te asesoramos vía WhatsApp, recibimos pagos online y realizamos envíos a toda
+                    Colombia o instalación directa en nuestro taller.
                   </p>
                 </div>
               </li>
 
               <li data-aos="fade-up" data-aos-delay="300">
                 <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-3"
-                  class="collapsed"
-                  >¿Hacen servicio de mecánico a domicilio?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-3"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
+                <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">
+                  ¿Hacen servicio de mecánico a domicilio?
+                  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                </a>
+                <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Con nuestro servicio de recogida de moto es como si tuvieras
-                    un mecánico a domicilio, junto a nuestra motocarro
-                    recolectora viaja un mecánico especializado que indicara si
-                    tu moto puede ser reparada en ese momento o si debe ir al
-                    taller, recuerda que esta recogida es totalmente gratis para
-                    topes superiores a $200.000 en servicio o repuestos.
+                    Nuestro servicio de recogida incluye un técnico especializado. Evaluamos tu moto en
+                    sitio y, si es necesario, la llevamos al taller sin costo adicional por encima de los
+                    topes definidos.
                   </p>
                 </div>
               </li>
 
               <li data-aos="fade-up" data-aos-delay="400">
                 <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-4"
-                  class="collapsed"
-                  >¿Dónde están ubicados?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-4"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
+                <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">
+                  ¿Dónde están ubicados?
+                  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                </a>
+                <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    Nos encuentras en 15 # 13-71 Barrio San pascual
+                    Visítanos en la Calle 15 # 13-71 Barrio San Pascual, Cali. Estamos listos para recibirte
+                    con servicio rápido y amable.
                   </p>
                 </div>
               </li>
@@ -764,38 +1100,39 @@
           </div>
         </div>
       </section>
-      <!-- End Frequently Asked Questions Section -->
+      <!-- End FAQ Section -->
 
       <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
+      <section id="contact" class="contact py-5 section-transition" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title text-center">
             <h2>Contacto</h2>
+            <p class="mt-3">Estamos listos para ayudarte a mantener tu moto en su mejor versión.</p>
           </div>
 
-          <div class="row">
+          <div class="row g-4">
             <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
+              <div class="info w-100 p-4 rounded-4 shadow-lg">
+                <div class="mb-4">
+                  <i class="bi bi-geo-alt fs-3 text-danger"></i>
                   <h4>Ubicación:</h4>
-                  <p>15 # 13-71 Barrio San pascual</p>
+                  <p>15 # 13-71 Barrio San Pascual, Cali - Colombia</p>
                 </div>
 
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
+                <div class="mb-4">
+                  <i class="bi bi-envelope fs-3 text-danger"></i>
+                  <h4>Correo:</h4>
                   <p>MotoKeyman@gmail.com</p>
                 </div>
 
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Telefono:</h4>
-                  <p>3167790452</p>
+                <div class="mb-4">
+                  <i class="bi bi-phone fs-3 text-danger"></i>
+                  <h4>Teléfono:</h4>
+                  <p>+57 316 779 0452</p>
                 </div>
 
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.618171022542!2d-76.53023998619575!3d3.4426839522403667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a68a8e80025b%3A0x2af0a58ef485770f!2sCra.%2015%20%2313%20-%2071%2C%20Guayaquil%2C%20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1673835934068!5m2!1ses!2sco"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.939732973821!2d-76.53518932414546!3d3.437220951474548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMjYnMTQuMCJOIDc2wrAzMicwMi4xIlc!5e0!3m2!1ses!2sco!4v1682713371001!5m2!1ses!2sco"
                   frameborder="0"
                   style="border: 0; width: 100%; height: 290px"
                   allowfullscreen
@@ -803,61 +1140,33 @@
               </div>
             </div>
 
-            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
+            <div class="col-lg-7 d-flex align-items-stretch">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100">
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Nombre</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      required
-                    />
+                    <input type="text" name="name" class="form-control" id="name" required />
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="name">Correo</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
+                    <label for="email">Correo</label>
+                    <input type="email" class="form-control" name="email" id="email" required />
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name">Asunto</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    required
-                  />
+                  <label for="subject">Servicio o repuesto que necesitas</label>
+                  <input type="text" class="form-control" name="subject" id="subject" required />
                 </div>
                 <div class="form-group">
-                  <label for="name">Mensage</label>
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="10"
-                    required
-                  ></textarea>
+                  <label for="message">Mensaje</label>
+                  <textarea class="form-control" name="message" rows="8" required></textarea>
                 </div>
                 <div class="my-3">
                   <div class="loading">Cargando</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Mensaje Enviado. Gracias!</div>
+                  <div class="sent-message">¡Mensaje enviado! Te contactaremos pronto.</div>
                 </div>
                 <div class="text-center">
-                  <button type="submit">Enviar</button>
+                  <button type="submit" class="btn-brand-primary">Enviar mensaje</button>
                 </div>
               </form>
             </div>
@@ -872,31 +1181,48 @@
     <footer id="footer">
       <div class="footer-top">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 footer-contact">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 footer-contact">
               <h3>MotoKeyman</h3>
               <p>
-                15 # 13-71 Barrio San pascual <br />
+                Calle 15 # 13-71 Barrio San Pascual<br />
                 Cali, Valle del Cauca<br />
-                Colombia <br /><br />
-                <strong>Número:</strong>3167790452<br />
-                <strong>Correo:</strong>MotoKeyman@gmail.com<br />
+                Colombia<br /><br />
+                <strong>Teléfono:</strong> +57 316 779 0452<br />
+                <strong>Correo:</strong> MotoKeyman@gmail.com
               </p>
             </div>
 
-            <div class="col-lg-6 col-md-6 footer-links">
-              <h4>Nuestras redes sociales</h4>
-              <p>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"
-                  ><i class="bx bxl-instagram"></i
-                ></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <div class="col-lg-4 col-md-6 footer-links">
+              <h4>Enlaces rápidos</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#hero">Inicio</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#about">Acerca de</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">Servicios</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#testimonios">Testimonios</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contacto</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <h4>Síguenos</h4>
+              <p>Conoce promociones, tips de mantenimiento y lanzamientos exclusivos.</p>
+              <div class="footer-social">
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="bx bxl-youtube"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              © <span id="currentYear"></span> MotoKeyman. Todos los derechos reservados.
             </div>
           </div>
         </div>
@@ -905,9 +1231,7 @@
     <!-- End Footer -->
 
     <div id="preloader"></div>
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
@@ -922,5 +1246,8 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
